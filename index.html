@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Whatsapp Chat Fake</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" href="./img/logo.webp">
+    <link rel="stylesheet" href="./styles/index.css" />
+  </head>
+  <body>
+    <div class="container min-vh-100">
+      <div
+        class="d-flex flex-column justify-content-center align-items-center gap-4 flex-lg-row"
+      >
+        <div class="p-4 bg-white w-100">
+          <div class="form-group">
+            <div>
+              <label for="name" class="form-label">Apodo del Chat</label>
+              <input
+                type="text"
+                class="form-control form-control-sm"
+                id="name-contact"
+                placeholder="Nombre"
+              />
+            </div>
+            <div class="mt-4">
+              <label class="form-label">Imagen del Chat</label>
+              <div class="d-flex justify-content-between align-content-center">
+                <img
+                  src="./img/user-empty.png"
+                  alt="Usuario vacio"
+                  class="imagen-chat"
+                />
+                <input type="file" accept="image/*" id="image-chat" hidden />
+                <label for="image-chat"
+                  ><img src="./img/image-icon.png" alt="Imagen Icon"
+                /></label>
+              </div>
+            </div>
+            <div class="menssages mt-4">
+              <label>Mensajes</label>
+              <textarea
+                class="form-control"
+                name="message"
+                id="message"
+              ></textarea>
+              <div class="d-flex w-100 justify-content-between mt-2">
+                <div class="form-group">
+                  <label for="time-data">Hora del mesage</label>
+                  <input type="time" name="time-data" id="time-data"/>
+                </div>
+                <div class="d-flex gap-3">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="option-message"
+                      id="option-tu"
+                    />
+                    <label class="form-check-label" for="option-tu"> Tu </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="option-message"
+                      id="option-el"
+                      checked
+                    />
+                    <label class="form-check-label" for="option-el"> El </label>
+                  </div>
+                </div>
+              </div>
+              <button
+                id="add-message"
+                class="btn btn-sm btn-light rounded-pill mt-2"
+              >
+                Agregar
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="p-2 bg-light rounded w-100 preview">
+          <div class="pb-4">
+            <div class="d-flex align-items-center gap-2">
+              <span class="text-danger">Previzualizacion</span>
+              <img
+                src="img/visibility-icon.svg"
+                class="img-fluid"
+                alt="Hide Icon"
+                width="20"
+              />
+            </div>
+          </div>
+          <div id="capture" class="card d-flex h-100 border-0">
+            <div class="card-header bg-success p-2 border-0">
+              <div class="d-flex align-items-center justify-content-between">
+                <div
+                  class="number d-flex align-items-center justify-content-center"
+                >
+                  <img
+                    src="img/arrow-back-icon.svg"
+                    class="img-fluid"
+                    width="25"
+                  />
+                  <img
+                    src="./img/user-empty.png"
+                    alt="User Image"
+                    class="imagen-chat"
+                    id="image-user-chat"
+                    width="35"
+                  />
+                  <span class="ms-2 text-white fw-semibold" id="chat-name"
+                    >Nombre</span
+                  >
+                </div>
+                <div>
+                  <div
+                    class="d-flex justify-content-center align-items-center gap-3"
+                  >
+                    <img
+                      src="img/video-icon.svg"
+                      class="img-fluid"
+                      width="20"
+                    />
+                    <img
+                      src="img/phone-icon.svg"
+                      class="img-fluid"
+                      width="20"
+                    />
+                    <img
+                      src="img/more-info-icon.svg"
+                      class="img-fluid"
+                      width="20"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body position-relative">
+              <div class="text-center mb-2">
+                <p class="date"></p>
+              </div>
+              <div
+                id="content-messages"
+                class="d-flex flex-column align-items-start gap-1"
+              ></div>
+              <div
+                class="position-absolute end-0 bg-transparent rounded w-100 p-0 px-2 py-2 m-0 border-0"
+              >
+                <div
+                  class="d-flex align-items-center justify-content-between gap-2"
+                >
+                  <div
+                    class="p-2 w-100 rounded-pill bg-light d-flex align-items-center justify-content-between"
+                  >
+                    <p class="m-0" style="color: #8696a0">
+                      <img
+                        src="img/emoji-icon.svg"
+                        class="img-fluid me-2"
+                        width="20"
+                      />Mensaje
+                    </p>
+                    <div class="d-flex gap-2">
+                      <img
+                        src="img/paperclip_icon.svg"
+                        class="img-fluid"
+                        alt=""
+                        width="20"
+                      />
+                      <img
+                        src="img/camera-icon.svg"
+                        class="img-fluid"
+                        alt=""
+                        width="20"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="bg-success p-2 rounded-circle"
+                    style="width: 40px; aspect-ratio: 1"
+                  >
+                    <img
+                      src="img/microphone_icon.svg"
+                      class="img-fluid"
+                      alt="Microphone Icon"
+                      width="20"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pt-4">
+            <div class="d-flex align-items-center justify-content-end gap-2">
+              <button
+                class="btn btn-sm bg-white rounded-pill d-flex align-items-center gap-2 btn-download text-danger"
+              >
+                Descargar<img
+                  src="img/file_download.svg"
+                  class="img-fluid"
+                  width="20"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/index.js" defer></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  </body>
+</html>
