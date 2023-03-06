@@ -17,6 +17,7 @@ Realiza un chat falso de Whatsapp agregando los ajustes que el usuario quiera. S
 - CSS
 - JS
 - Canvas
+- Boostrap
 
 ## Autor
 
