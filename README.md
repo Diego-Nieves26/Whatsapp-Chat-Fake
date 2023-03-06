@@ -5,17 +5,18 @@
 
 ## Decripcion
 
-Clon version web del popular juego Simon Says que es un juego de memoria atravez de colores.
+Realiza un chat falso de Whatsapp agregando los ajustes que el usuario quiera. Se puede descargar el chat generado con la herramienta canvas a travez de una imagen PNG.
 
 ## Link
 
-- https://elaborate-rabanadas-4bc137.netlify.app/
+- https://sensational-cupcake-2df5d6.netlify.app/
 
 ## Lenguajes o Herramientas
 
 - HTML
 - CSS
 - JS
+- Canvas
 
 ## Autor
 
